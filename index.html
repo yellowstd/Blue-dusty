@@ -412,34 +412,6 @@ ul{
 }
 
 /* =========================
-   MOBILE
-========================= */
-@media(max-width:768px){
-
-    .container{
-        padding:0 20px;
-    }
-
-    .ornament{
-        width:140px;
-    }
-
-    .section{
-        padding:80px 0;
-    }
-
-    .music-btn{
-
-        width:52px;
-        height:52px;
-
-        right:18px;
-        bottom:18px;
-    }
-
-}
-  
-  /* =========================
    COVER
 ========================= */
 
@@ -525,8 +497,6 @@ ul{
 
     bottom:-100px;
     right:-100px;
-
-    transform:rotate(180deg);
 }
 
 /* =========================
@@ -539,7 +509,7 @@ ul{
 
     z-index:3;
 
-    width:min(90%,700px);
+    width:min(90%,650px);
 
     text-align:center;
 }
@@ -556,11 +526,11 @@ ul{
 
     letter-spacing:8px;
 
-    font-size:.8rem;
+    font-size:.75rem;
 
     color:var(--blue-dark);
 
-    margin-bottom:2rem;
+    margin-bottom:1.5rem;
 
     opacity:0;
 
@@ -568,45 +538,6 @@ ul{
         fadeUp .8s ease forwards;
 
     animation-delay:.2s;
-}
-
-/* =========================
-   FRAME
-========================= */
-
-.name-ornament{
-
-    width:220px;
-
-    margin:
-        0 auto
-        1.5rem;
-
-    opacity:.95;
-
-    filter:
-        drop-shadow(
-            0 0 12px
-            rgba(212,175,55,.15)
-        );
-
-    animation:
-        ornamentPulse 4s ease-in-out infinite;
-}
-@keyframes ornamentPulse{
-
-    0%,100%{
-
-        transform:
-            scale(1);
-    }
-
-    50%{
-
-        transform:
-            scale(1.04);
-    }
-
 }
 
 /* =========================
@@ -619,27 +550,58 @@ ul{
 
     font-size:
         clamp(
-            4.5rem,
-            10vw,
-            7rem
+            3.5rem,
+            8vw,
+            5.5rem
         );
 
-    line-height:.85;
+    line-height:.9;
 
     font-weight:400;
 
     color:var(--text);
+
+    opacity:0;
+
+    animation:
+        fadeUp .8s ease forwards;
+
+    animation-delay:.5s;
 }
 
 .cover-and{
 
     display:block;
 
-    font-size:.45em;
+    font-size:.4em;
 
     color:var(--gold);
 
-    margin:.2rem 0;
+    margin:.15rem 0;
+}
+
+/* =========================
+   FRAME
+========================= */
+
+.name-ornament{
+
+    width:180px;
+
+    margin:
+        1rem auto
+        1rem;
+
+    opacity:.95;
+
+    filter:
+        drop-shadow(
+            0 0 12px
+            rgba(212,175,55,.15)
+        );
+
+    animation:
+        ornamentPulse 4s ease-in-out infinite;
 }
 
 /* =========================
@@ -648,11 +610,11 @@ ul{
 
 .cover-date{
 
-    margin-top:2rem;
+    margin-top:.5rem;
 
     font-family:var(--font-body);
 
-    letter-spacing:4px;
+    letter-spacing:6px;
 
     color:var(--blue-dark);
 
@@ -673,17 +635,17 @@ ul{
 .cover-guest{
 
     margin:
-        2rem auto
+        1.8rem auto
         0;
 
-    width:max-content;
+    max-width:420px;
 
     background:#fff;
 
-    border-radius:24px;
+    border-radius:22px;
 
     padding:
-        18px 36px;
+        14px 28px;
 
     border:
         1px solid
@@ -707,14 +669,20 @@ ul{
 
     color:var(--muted);
 
-    margin-bottom:.5rem;
+    font-size:.8rem;
+
+    margin-bottom:.4rem;
 }
 
 .cover-guest h3{
 
     font-family:var(--font-heading);
 
+    font-size:1rem;
+
     font-weight:400;
+
+    line-height:1.5;
 }
 
 /* =========================
@@ -723,7 +691,7 @@ ul{
 
 .cover-btn{
 
-    margin-top:2rem;
+    margin-top:1.5rem;
 
     opacity:0;
 
@@ -752,6 +720,21 @@ ul{
         opacity:1;
 
         transform:none;
+    }
+}
+
+@keyframes ornamentPulse{
+
+    0%,100%{
+
+        transform:
+            scale(1);
+    }
+
+    50%{
+
+        transform:
+            scale(1.04);
     }
 }
 
@@ -794,19 +777,22 @@ ul{
         right:-60px;
     }
 
-    .cover-frame{
-
-        width:100%;
-    }
-
     .cover-title{
 
         font-size:4rem;
     }
 
+    .name-ornament{
+
+        width:140px;
+    }
+
     .cover-guest{
 
-        width:100%;
+        width:90%;
+
+        padding:
+            12px 20px;
     }
 
 }
@@ -2190,12 +2176,6 @@ ul{
             THE WEDDING OF
         </span>
 
-        <!-- FRAME ORNAMENT -->
-        <img
-            src="frame-name.png"
-            alt=""
-            class="name-ornament">
-
         <h1 class="cover-title">
 
             Rizky
@@ -2208,13 +2188,21 @@ ul{
 
         </h1>
 
+        <!-- FRAME ORNAMENT -->
+        <img
+            src="frame-name.png"
+            alt=""
+            class="name-ornament">
+
         <p class="cover-date">
             10 • 10 • 2026
         </p>
 
         <div class="cover-guest">
 
-            <small>Kepada Yth.</small>
+            <small>
+                Kepada Yth.
+            </small>
 
             <h3>
                 Bapak / Ibu / Saudara(i)
@@ -2232,7 +2220,7 @@ ul{
 
     </div>
 
-</section>
+    </section>
 
     <!-- =========================
          MAIN CONTENT
