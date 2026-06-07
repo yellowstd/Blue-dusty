@@ -152,7 +152,7 @@ ul{
 
     letter-spacing:6px;
 
-    font-size:.5rem;
+    font-size:.8rem;
 
     color:var(--blue);
 
@@ -499,9 +499,6 @@ ul{
 
     position:absolute;
 
-    width:350px;
-    height:350px;
-
     background:
         url(ornament.png)
         center/contain
@@ -511,24 +508,32 @@ ul{
 
     opacity:.95;
 
-    animation:
-        ornamentFloat 8s ease-in-out infinite;
+    pointer-events:none;
 }
+
+/* KIRI ATAS */
 
 .cover-ornament.tl{
 
-    top:-100px;
-    left:-100px;
+    width:260px;
+    height:260px;
+
+    top:-40px;
+    left:-40px;
 }
+
+/* KANAN BAWAH */
 
 .cover-ornament.br{
 
-    bottom:-100px;
-    right:-100px;
+    width:420px;
+    height:420px;
 
-    transform:rotate(180deg);
+    bottom:-40px;
+    right:-40px;
+
+    transform:none; /* HAPUS ROTATE */
 }
-
 /* =========================
    CONTENT
 ========================= */
