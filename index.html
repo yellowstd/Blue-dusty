@@ -797,6 +797,35 @@ ul{
 
 }
 
+    /* =========================
+   NAME FRAME BACKGROUND
+========================= */
+
+.name-frame-bg{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    width:340px;
+    height:340px;
+
+    background:
+        url(frame-name.png)
+        center/contain
+        no-repeat;
+
+    opacity:.9;
+
+    z-index:-1;
+
+    pointer-events:none;
+}
+
 /* =========================
    OPENING
 ========================= */
@@ -2173,24 +2202,22 @@ ul{
     <div class="cover-inner">
 
         <span class="cover-label">
-            THE WEDDING OF
-        </span>
+        <div class="name-frame-bg"></div>
 
-        <h1 class="cover-title">
+<h1 class="cover-title">
 
-            Rizky
+    Rizky
 
-            <span class="cover-and">
-                &
-            </span>
+    <span class="cover-and">
+        &
+    </span>
 
-            Diana
+    Diana
 
-        </h1>
-
+</h1>
         <!-- FRAME ORNAMENT -->
         <img
-            src="frame-name.png"
+            src="ornament-b.png"
             alt=""
             class="name-ornament">
 
