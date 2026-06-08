@@ -492,7 +492,7 @@ ul{
 }
 
 /* =========================
-   ORNAMENT
+   COVER ORNAMENT
 ========================= */
 
 .cover-ornament{
@@ -511,29 +511,140 @@ ul{
     pointer-events:none;
 }
 
-/* KIRI ATAS */
+/* =========================
+   TOP LEFT
+========================= */
 
 .cover-ornament.tl{
 
     width:360px;
     height:360px;
 
-    top:-0px;
-    left:-0px;
+    top:0;
+    left:0;
+
+    animation:
+        flowerFloatTL 8s ease-in-out infinite;
+}
+    /* =========================
+   FLOWER TL
+========================= */
+
+@keyframes flowerFloatTL{
+
+    0%{
+
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(1);
+    }
+
+    25%{
+
+        transform:
+            translateY(-8px)
+            rotate(-1deg)
+            scale(1.01);
+    }
+
+    50%{
+
+        transform:
+            translateY(-15px)
+            rotate(1deg)
+            scale(1.03);
+    }
+
+    75%{
+
+        transform:
+            translateY(-8px)
+            rotate(-1deg)
+            scale(1.01);
+    }
+
+    100%{
+
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(1);
+    }
 }
 
-/* KANAN BAWAH */
+/* =========================
+   FLOWER BR
+========================= */
+
+@keyframes flowerFloatBR{
+
+    0%{
+
+        transform:
+            rotate(180deg)
+            translateY(0)
+            scale(1);
+    }
+
+    25%{
+
+        transform:
+            rotate(179deg)
+            translateY(-8px)
+            scale(1.01);
+    }
+
+    50%{
+
+        transform:
+            rotate(181deg)
+            translateY(-15px)
+            scale(1.03);
+    }
+
+    75%{
+
+        transform:
+            rotate(179deg)
+            translateY(-8px)
+            scale(1.01);
+    }
+
+    100%{
+
+        transform:
+            rotate(180deg)
+            translateY(0)
+            scale(1);
+    }
+}
+    .cover-ornament{
+
+    filter:
+        drop-shadow(
+            0 0 15px
+            rgba(212,175,55,.12)
+        );
+    }
+
+/* =========================
+   BOTTOM RIGHT
+========================= */
 
 .cover-ornament.br{
 
     width:420px;
     height:420px;
 
-    bottom:-0px;
-    right:-0px;
+    bottom:0;
+    right:0;
 
-    transform:rotate(180deg);
+    animation:
+        flowerFloatBR 9s ease-in-out infinite;
 }
+
+
 /* =========================
    CONTENT
 ========================= */
@@ -2584,7 +2695,7 @@ ul{
 
         <!-- LOVE STORY -->
         <section class="story section">
-        <div class="ornament o-tr"></div>
+        <div class="ornament o-tl"></div>
 
 <div class="container">
 
@@ -2746,7 +2857,7 @@ ul{
         </section>
 
         <!-- GALLERY -->
-        <section class="gallery section"><div class="ornament o-bl"></div>
+        <section class="gallery section"><div class="ornament o-tr"></div>
 
 <div class="container">
 
@@ -3010,7 +3121,7 @@ ul{
 
         <!-- CLOSING -->
         <section class="closing section">
-          <div class="ornament o-tr"></div>
+          <div class="ornament o-tl"></div>
 
 <div class="container">
 
